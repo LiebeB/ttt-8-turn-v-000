@@ -42,7 +42,9 @@ def turn(board)
   # input to index
   index = input_to_index(user_input)
   if valid_move?(board, index)
-    return true
-  else false
+   move(board,index,value="X")
+  else 
+   puts "Oops, invalid move! Please try again."
+   turn(board)
   end
 end
